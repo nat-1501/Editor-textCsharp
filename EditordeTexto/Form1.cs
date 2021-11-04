@@ -16,5 +16,10 @@ namespace EditordeTexto
         {
             InitializeComponent();
         }
+
+        private void defazerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
