@@ -75,9 +75,9 @@ namespace EditordeTexto
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(246, 211);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 52);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(800, 468);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -409,7 +409,9 @@ namespace EditordeTexto
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor de texto - C#";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

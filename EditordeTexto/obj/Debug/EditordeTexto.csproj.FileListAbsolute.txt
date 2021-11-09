@@ -1,0 +1,10 @@
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\bin\Debug\EditordeTexto.exe.config
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\bin\Debug\EditordeTexto.exe
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\bin\Debug\EditordeTexto.pdb
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.csproj.AssemblyReference.cache
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.Form1.resources
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.Properties.Resources.resources
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.csproj.GenerateResource.cache
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.csproj.CoreCompileInputs.cache
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.exe
+C:\Users\Nataly\Documents\Editor text-cSharp\EditordeTexto\obj\Debug\EditordeTexto.pdb
