@@ -16,6 +16,9 @@ namespace EditordeTexto
 {
     public partial class Form1 : Form
     {
+
+        StreamReader leitura = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,9 +29,20 @@ namespace EditordeTexto
 
         }
 
+        private void Novo()
+        {
+            richTextBox1.Clear();
+            richTextBox1.Focus();
+        }
+
         private void btn_novo_Click(object sender, EventArgs e)
         {
+            Novo();
+        }
 
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Novo();
         }
 
         private void btn_abrir_Click(object sender, EventArgs e)
