@@ -83,6 +83,26 @@ namespace Editor_de_texto.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alinhamento_a_esquerda {
+            get {
+                object obj = ResourceManager.GetObject("alinhamento-a-esquerda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alinhar_a_direita {
+            get {
+                object obj = ResourceManager.GetObject("alinhar-a-direita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap colar {
             get {
                 object obj = ResourceManager.GetObject("colar", resourceCulture);
@@ -106,6 +126,16 @@ namespace Editor_de_texto.Properties {
         internal static System.Drawing.Bitmap italico {
             get {
                 object obj = ResourceManager.GetObject("italico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap justificar {
+            get {
+                object obj = ResourceManager.GetObject("justificar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
