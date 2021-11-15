@@ -16,5 +16,10 @@ namespace Editor_de_texto
         {
             InitializeComponent();
         }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
