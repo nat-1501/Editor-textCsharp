@@ -402,6 +402,10 @@ namespace Editor_de_texto
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "csharp";
+            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
