@@ -80,6 +80,42 @@ namespace Editor_de_texto
             openFileDialog1.InitialDirectory = @"C:\Users\Nataly\Documents\Editor text-cSharp\";
             openFileDialog1.Filter = "(*.CSHARP)|*.CSHARP";
 
+            DialogResult dr = this.openFileDialog1.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    FileStream arquivo = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                    StreamReader editortexto_streamReader = new StreamReader(arquivo);
+                    editortexto_streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    this.richTextBox1.Text = "";
+                    string linha = editortexto_streamReader.ReadLine();
+                    while(linha != null)
+                    {
+                        this.richTextBox1.Text += linha + "\n";
+                        linha = editortexto_streamReader.ReadLine();
+                    }
+                    editortexto_streamReader.Close();
+
+                }
+                catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro de leitura do arquivo: " + ex.Message, "Erro ao ler!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                
+            }
+
+
+        }
+
+        private void btn_abrir_Click(object sender, EventArgs e)
+        {
+            Abrir();
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abrir();
         }
     }
 }
