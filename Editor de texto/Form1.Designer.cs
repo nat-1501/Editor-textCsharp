@@ -405,6 +405,7 @@ namespace Editor_de_texto
             // saveFileDialog1
             // 
             this.saveFileDialog1.DefaultExt = "csharp";
+            this.saveFileDialog1.Filter = "(*.CSHARP)|*.CSHARP";
             // 
             // printDialog1
             // 

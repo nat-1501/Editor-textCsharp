@@ -73,5 +73,13 @@ namespace Editor_de_texto
         {
             Salvar();
         }
+
+        private void Abrir()
+        {
+            this.openFileDialog1.Title = "Abrir Arquivos";
+            openFileDialog1.InitialDirectory = @"C:\Users\Nataly\Documents\Editor text-cSharp\";
+            openFileDialog1.Filter = "(*.CSHARP)|*.CSHARP";
+
+        }
     }
 }
