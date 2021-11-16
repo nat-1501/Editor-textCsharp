@@ -41,5 +41,37 @@ namespace Editor_de_texto
         {
             Novo();
         }
+
+        private void Salvar ()
+        {
+            try
+            {
+                if(this.saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    FileStream arquivo = new FileStream(saveFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.Write);
+                    StreamWriter editortexto_streamWriter = new StreamWriter(arquivo);
+                    editortexto_streamWriter.Flush();
+                    editortexto_streamWriter.BaseStream.Seek(0, SeekOrigin.Begin);
+                    editortexto_streamWriter.Write(this.richTextBox1.Text);
+                    editortexto_streamWriter.Flush();
+                    editortexto_streamWriter.Close();
+
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro na gravação do arquivo: " + ex.Message, "Erro ao gravar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salvar();
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            Salvar();
+        }
     }
 }
