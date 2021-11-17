@@ -117,5 +117,38 @@ namespace Editor_de_texto
         {
             Abrir();
         }
+
+        private void Copiar()
+        {
+            if(richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.Copy();
+            }
+        }
+
+        private void Colar()
+        {
+            richTextBox1.Paste();
+        }
+
+        private void btn_copiar_Click(object sender, EventArgs e)
+        {
+            Copiar();
+        }
+
+        private void btn_colar_Click(object sender, EventArgs e)
+        {
+            Colar();
+        }
+
+        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Colar();
+        }
+
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Copiar();
+        }
     }
 }
