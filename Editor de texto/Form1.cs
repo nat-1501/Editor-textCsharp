@@ -179,9 +179,9 @@ namespace Editor_de_texto
 
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
-            negri = richTextBox1.Font.Bold;
+            ita = richTextBox1.Font.Italic;
 
-            if (negri == false)
+            if (ita == false)
             {
                 richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic);
             }
@@ -190,5 +190,26 @@ namespace Editor_de_texto
                 richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
             }
         }
+
+        private void Sublinhado()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool sub = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            sub = richTextBox1.Font.Underline;
+
+            if (sub == false)
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline);
+            }
+            else
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+            }
+        }
     }
+
 }
