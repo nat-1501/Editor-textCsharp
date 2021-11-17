@@ -150,5 +150,25 @@ namespace Editor_de_texto
         {
             Copiar();
         }
+
+        private void Negrito()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool negri = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            negri = richTextBox1.Font.Bold;
+
+            if(negri == false)
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte,tamanho_da_fonte,FontStyle.Bold);
+            }
+            else
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+            }
+        }
     }
 }
