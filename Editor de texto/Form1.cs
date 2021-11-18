@@ -207,8 +207,38 @@ namespace Editor_de_texto
             }
             else
             {
-                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline);
             }
+        }
+
+        private void btn_negrito_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void btn_italico_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void btn_sublinhado_Click(object sender, EventArgs e)
+        {
+            Sublinhado();
+        }
+
+        private void negritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void italicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sublinhado();
         }
     }
 
