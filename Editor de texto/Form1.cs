@@ -155,20 +155,57 @@ namespace Editor_de_texto
         {
             string nome_da_fonte = null;
             float tamanho_da_fonte = 0;
-            bool negri = false;
+            bool n,i,s = false;
 
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
-            negri = richTextBox1.Font.Bold;
+            n = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Bold;
+            s = richTextBox1.SelectionFont.Bold;
 
-            if(negri == false)
+            richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+
+
+            if (n == false)
             {
-                richTextBox1.SelectionFont = new Font(nome_da_fonte,tamanho_da_fonte,FontStyle.Bold);
-            }
-            else
+                if (i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                }
+                else if (i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
+
+                }
+                else if (i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic);
+                }
+                else if (i == false & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
+                }
+               
+             }
+             else
             {
-                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+                if (i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                }
+                else if (i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
+
+                }
+                else if (i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic);
+                }
+                else if (i == false & s == false)
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
             }
+
         }
 
         private void Italico()
