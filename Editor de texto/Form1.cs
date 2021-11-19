@@ -160,8 +160,8 @@ namespace Editor_de_texto
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
             n = richTextBox1.SelectionFont.Bold;
-            i = richTextBox1.SelectionFont.Bold;
-            s = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
 
             richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
 
@@ -217,8 +217,8 @@ namespace Editor_de_texto
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
             n = richTextBox1.SelectionFont.Bold;
-            i = richTextBox1.SelectionFont.Bold;
-            s = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
 
             richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
 
@@ -272,8 +272,8 @@ namespace Editor_de_texto
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
             n = richTextBox1.SelectionFont.Bold;
-            i = richTextBox1.SelectionFont.Bold;
-            s = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
 
             richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
 
@@ -316,6 +316,21 @@ namespace Editor_de_texto
                 }
             }  
 
+        }
+
+        private void alinharEsquerda()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void alinharDireita()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void alinharCentro()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void btn_negrito_Click(object sender, EventArgs e)
