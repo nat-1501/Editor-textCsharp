@@ -412,7 +412,24 @@ namespace Editor_de_texto
             string linha = null;
             Font Fonte = this.richTextBox1.Font;
             SolidBrush pincel = new SolidBrush(Color.Black);
-
+            linhasPagina = e.MarginBounds.Height / Fonte.GetHeight(e.Graphics);
+            linha = leitura.ReadLine();
+            while(cont < linhasPagina)
+            {
+                PosY = (margemSuperior + (cont * Fonte.GetHeight(e.Graphics)));
+                e.Graphics.DrawString(linha, Fonte, pincel, margemEsquerda, PosY, new StringFormat());
+                cont += 1;
+                linha = leitura.ReadLine();
+            }
+            if(linha !=null)
+            {
+                e.HasMorePages = true;
+            }
+            else
+            {
+                e.HasMorePages = false;
+            }
+            pincel.Dispose();
         }
     }
 
