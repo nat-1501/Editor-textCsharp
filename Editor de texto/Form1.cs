@@ -14,7 +14,7 @@ namespace Editor_de_texto
 {
     public partial class Form1 : Form
     {
-        StreamReader leitura = null;
+        StringReader leitura = null;
 
         public Form1()
         {
@@ -42,11 +42,11 @@ namespace Editor_de_texto
             Novo();
         }
 
-        private void Salvar ()
+        private void Salvar()
         {
             try
             {
-                if(this.saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (this.saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     FileStream arquivo = new FileStream(saveFileDialog1.FileName, FileMode.OpenOrCreate, FileAccess.Write);
                     StreamWriter editortexto_streamWriter = new StreamWriter(arquivo);
@@ -57,7 +57,7 @@ namespace Editor_de_texto
                     editortexto_streamWriter.Close();
 
                 }
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show("Erro na gravação do arquivo: " + ex.Message, "Erro ao gravar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -90,7 +90,7 @@ namespace Editor_de_texto
                     editortexto_streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
                     this.richTextBox1.Text = "";
                     string linha = editortexto_streamReader.ReadLine();
-                    while(linha != null)
+                    while (linha != null)
                     {
                         this.richTextBox1.Text += linha + "\n";
                         linha = editortexto_streamReader.ReadLine();
@@ -99,10 +99,10 @@ namespace Editor_de_texto
 
                 }
                 catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro de leitura do arquivo: " + ex.Message, "Erro ao ler!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                
+                {
+                    MessageBox.Show("Erro de leitura do arquivo: " + ex.Message, "Erro ao ler!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
 
 
@@ -120,7 +120,7 @@ namespace Editor_de_texto
 
         private void Copiar()
         {
-            if(richTextBox1.SelectionLength > 0)
+            if (richTextBox1.SelectionLength > 0)
             {
                 richTextBox1.Copy();
             }
@@ -155,7 +155,7 @@ namespace Editor_de_texto
         {
             string nome_da_fonte = null;
             float tamanho_da_fonte = 0;
-            bool n,i,s = false;
+            bool n, i, s = false;
 
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
@@ -185,9 +185,9 @@ namespace Editor_de_texto
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
                 }
-               
-             }
-             else
+
+            }
+            else
             {
                 if (i == true & s == true)
                 {
@@ -259,7 +259,7 @@ namespace Editor_de_texto
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
                 }
-                
+
             }
         }
 
@@ -314,8 +314,19 @@ namespace Editor_de_texto
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
                 }
-            }  
+            }
 
+        }
+
+        private void imprimir()
+        {
+            printDialog1.Document = printDocument1;
+            string texto = this.richTextBox1.Text;
+            leitura = new StringReader(texto);
+            if(printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument1.Print();
+            }
         }
 
         private void alinharEsquerda()
@@ -376,6 +387,32 @@ namespace Editor_de_texto
         private void btn_centro_Click(object sender, EventArgs e)
         {
             alinharCentro();
+        }
+
+        private void imprimirToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            imprimir();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            float linhasPagina = 0;
+            float PosY = 0;
+            int cont = 0;
+            float margemEsquerda = e.MarginBounds.Left - 50;
+            float margemSuperior = e.MarginBounds.Top - 50;
+            if(margemEsquerda < 5)
+            {
+                margemEsquerda = 20;
+            }
+            if (margemSuperior < 5)
+            {
+                margemSuperior = 20;
+            }
+            string linha = null;
+            Font Fonte = this.richTextBox1.Font;
+            SolidBrush pincel = new SolidBrush(Color.Black);
+
         }
     }
 
