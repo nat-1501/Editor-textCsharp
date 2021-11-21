@@ -391,6 +391,7 @@ namespace Editor_de_texto
             this.btn_esquerda.Name = "btn_esquerda";
             this.btn_esquerda.Size = new System.Drawing.Size(23, 22);
             this.btn_esquerda.Text = "Esquerda";
+            this.btn_esquerda.Click += new System.EventHandler(this.btn_esquerda_Click);
             // 
             // btn_direita
             // 
@@ -400,6 +401,7 @@ namespace Editor_de_texto
             this.btn_direita.Name = "btn_direita";
             this.btn_direita.Size = new System.Drawing.Size(23, 22);
             this.btn_direita.Text = "Direita";
+            this.btn_direita.Click += new System.EventHandler(this.btn_direita_Click);
             // 
             // btn_centro
             // 
@@ -409,6 +411,7 @@ namespace Editor_de_texto
             this.btn_centro.Name = "btn_centro";
             this.btn_centro.Size = new System.Drawing.Size(23, 22);
             this.btn_centro.Text = "Centro";
+            this.btn_centro.Click += new System.EventHandler(this.btn_centro_Click);
             // 
             // openFileDialog1
             // 

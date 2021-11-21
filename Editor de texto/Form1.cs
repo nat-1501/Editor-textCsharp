@@ -362,6 +362,21 @@ namespace Editor_de_texto
         {
             Sublinhado();
         }
+
+        private void btn_esquerda_Click(object sender, EventArgs e)
+        {
+            alinharEsquerda();
+        }
+
+        private void btn_direita_Click(object sender, EventArgs e)
+        {
+            alinharDireita();
+        }
+
+        private void btn_centro_Click(object sender, EventArgs e)
+        {
+            alinharCentro();
+        }
     }
 
 }
